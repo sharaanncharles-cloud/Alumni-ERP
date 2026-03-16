@@ -1,0 +1,128 @@
+{
+  "brand_identity": {
+    "name": "AlumniConnect",
+    "mission": "To create a joyful, fun-loving, and colorful extension of the college experience that bridges the gap between students and alumni through mentorship, career growth, and community.",
+    "tone": "Professional yet Personal, Vibrant, Inclusive, Academic but Modern",
+    "archetype": "Neo-Academic (Archetype 6: Vibrant Play mixed with Archetype 4: Swiss Clarity)"
+  },
+  "typography": {
+    "headings": {
+      "family": "Outfit, sans-serif",
+      "weights": ["500", "700"],
+      "usage": "Use for all page titles, section headers, and hero text. Letter-spacing tight."
+    },
+    "body": {
+      "family": "DM Sans, sans-serif",
+      "weights": ["400", "500"],
+      "usage": "Use for all paragraphs, labels, and UI text. High legibility."
+    },
+    "font_loading_instruction": "Import fonts via Google Fonts in index.css: @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&family=Outfit:wght@100..900&display=swap');"
+  },
+  "colors": {
+    "primary": {
+      "DEFAULT": "#1e3a8a",
+      "foreground": "#ffffff",
+      "description": "Deep Royal Blue - Represents Trust, Wisdom, and Academic Roots."
+    },
+    "secondary": {
+      "DEFAULT": "#facc15",
+      "foreground": "#1e1e1e",
+      "description": "Vibrant Yellow - Represents Energy, Optimism, and the 'Colorful' vibe."
+    },
+    "accent": {
+      "DEFAULT": "#ec4899",
+      "foreground": "#ffffff",
+      "description": "Playful Pink - Used for gamification badges, 'Applaud' actions, and highlights."
+    },
+    "background": {
+      "DEFAULT": "#f8fafc",
+      "paper": "#ffffff",
+      "dark": "#0f172a"
+    },
+    "status": {
+      "success": "#10b981",
+      "warning": "#f59e0b",
+      "error": "#ef4444",
+      "info": "#3b82f6"
+    }
+  },
+  "visual_enhancers": {
+    "radius": "rounded-xl",
+    "shadows": {
+      "card": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+      "hover": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+      "glow": "0 0 15px rgba(236, 72, 153, 0.3)"
+    },
+    "glassmorphism": {
+      "enabled": true,
+      "classes": "bg-white/70 backdrop-blur-lg border border-white/20 shadow-sm"
+    },
+    "textures": "Subtle noise overlay on the main background to reduce digital flatness (optional)."
+  },
+  "layout_strategies": {
+    "dashboard": {
+      "structure": "Sidebar Navigation (Left) + Top Header (User Profile) + Main Content Area (Bento Grid)",
+      "spacing": "Gap-6 or Gap-8 between widgets. Padding-8 for container.",
+      "responsive": "Sidebar becomes bottom nav or hamburger menu on mobile."
+    },
+    "profile_page": {
+      "structure": "Hero Banner (Top) + Floating Avatar + Two Column Layout (Left: Bio/Stats, Right: Activity/Timeline)",
+      "grid_style": "Bento Grid Mode A (Tetris) - Mix of tall, square, and wide cards."
+    },
+    "landing_page": {
+      "structure": "Hero Section (Split or Center) + Feature Grid + Testimonials + Call to Action",
+      "style": "High impact, large typography, generous whitespace (py-20)."
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-primary text-white hover:bg-primary/90 rounded-full px-8 py-3 font-medium transition-transform hover:scale-105 active:scale-95",
+      "secondary": "bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-full px-8 py-3 font-medium",
+      "ghost": "hover:bg-accent/10 text-accent hover:text-accent-foreground"
+    },
+    "cards": {
+      "default": "bg-white rounded-xl border border-slate-100 shadow-card hover:shadow-hover transition-all duration-300",
+      "interactive": "cursor-pointer hover:-translate-y-1"
+    },
+    "inputs": {
+      "style": "bg-slate-50 border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 rounded-lg h-12 px-4"
+    },
+    "badges": {
+      "gamification": "rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-white font-bold shadow-lg border-2 border-white"
+    }
+  },
+  "gamification_elements": {
+    "leaderboard": {
+      "style": "List view with medals for Top 3. Highlight current user rank at bottom sticky.",
+      "icons": "Use Gold/Silver/Bronze colors for ranks 1-3."
+    },
+    "streaks": {
+      "visual": "Fire icon with counter. Animate on increase.",
+      "color": "text-orange-500"
+    },
+    "applaud": {
+      "interaction": "Button with 'Clap' icon. Confetti explosion effect on click."
+    }
+  },
+  "charts_and_data": {
+    "library": "Recharts (via Shadcn/Charts)",
+    "style": "Clean, minimal axes. Rounded bar ends. Tooltips with glassmorphism.",
+    "colors": ["#1e3a8a", "#facc15", "#ec4899", "#10b981", "#3b82f6"]
+  },
+  "image_urls": {
+    "hero_background": "https://images.unsplash.com/photo-1758413148947-fa1c2595525c?q=85&w=1920&auto=format&fit=crop",
+    "auth_background": "https://images.unsplash.com/photo-1760976180663-946ff68fa64c?q=85&w=1920&auto=format&fit=crop",
+    "community_collaboration": "https://images.unsplash.com/photo-1650784855038-9f4d5ed154a9?q=85&w=1000&auto=format&fit=crop",
+    "default_avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Felix",
+    "placeholder_logo": "https://placehold.co/100x100?text=Logo"
+  },
+  "universal_guidelines": {
+    "interaction": "All interactive elements must have hover/active states. No dead clicks.",
+    "accessibility": "Ensure contrast ratio of 4.5:1 for text. Use aria-labels for icon-only buttons.",
+    "testing": "All critical elements must have data-testid attributes (e.g., data-testid='login-btn').",
+    "animation": "Use framer-motion for page transitions and micro-interactions. Avoid 'transition: all'.",
+    "forms": "Use Shadcn Form + Zod for validation. Show error messages clearly below inputs.",
+    "responsive": "Mobile-first approach. Ensure touch targets are at least 44px."
+  },
+  "instructions_to_main_agent": "1. Install 'lucide-react', 'recharts', 'framer-motion', 'clsx', 'tailwind-merge' if not present.\n2. Create a 'Layout' component that handles the sidebar/header structure for authenticated pages.\n3. Use the 'Bio' content provided in the prompt for the seed data/placeholders.\n4. Implement the 'Applaud' feature using a simple counter state with local storage for MVP.\n5. For charts, create a 'StatsCard' component that wraps the chart with a title and summary metric.\n6. Ensure the 'Admin' role has distinct visual cues (e.g., a badge or specific header color) to differentiate from Student/Alumni views."
+}
